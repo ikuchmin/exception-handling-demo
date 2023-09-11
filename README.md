@@ -1,3 +1,4 @@
+
 # Exceptions and Exception handlers
 
 В данной статье мы поговорим об исключениях и их обработке, рассмотрим какие варианты нам доступны в Spring,
@@ -74,6 +75,8 @@ ExceptionHandler не определен
 4. Убедиться в возможности повторной обработки исключения в ControllerAdvice классе, при условии что в 
    контроллере имеется обработчик, который вызвался и в котором исключение было брошено повторнор - **FAIL**.
    Это собственно видно из реализации класса `ExceptionHandlerExceptionResolver`
+5. Проверить, что если в контроллере у меня обрабатывается парент а в ControllerAdvice более специфичный,
+   будет ли вызван более специфичный? todo 
 
 
 
@@ -90,3 +93,4 @@ Re-throw exceptions from controller
 
 1. [Обработка исключений в контроллерах Spring](https://habr.com/en/articles/528116/)
 2. [Exception Handling in Spring MVC](https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc)
+3. [Spring Boot + ControllerAdvice + ResponseBodyAdvice или как обернуть ответ контроллеров](https://habr.com/en/articles/567056/)
